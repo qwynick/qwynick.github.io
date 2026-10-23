@@ -124,9 +124,11 @@ function resetFilters() {
 }
 
 function pageLabel(p: Problem) {
+    /*
   return p.contest && p.problem
     ? `${p.contest} ${p.problem}`
-    : p.title
+    : p.title*/
+    return p.title
 }
 </script>
 
@@ -197,7 +199,7 @@ function pageLabel(p: Problem) {
         </button>
       </div>
 
-      <details class="tag-filter">
+      <details class="tag-filter" open>
         <summary>
           算法标签
           <span v-if="selectedTags.length">
@@ -441,6 +443,9 @@ function pageLabel(p: Problem) {
 
 .problem-title {
   min-width: 115px;
+  max-width: 800px;
+  overflow: hidden;
+  text-overflow:ellipsis;
   white-space: nowrap;
 }
 

@@ -1,9 +1,9 @@
 ---
-title: ABC 题解目录
+title: ARC 题解目录
 ---
 
-# AtCoder Beginner Contest（ABC）
+# AtCoder Regular Contest（ARC）
 
-这里收录 ABC 系列题解。
+这里收录 ARC 系列题解。
 
-<AtCoderIndex />
+<ARCIndex />

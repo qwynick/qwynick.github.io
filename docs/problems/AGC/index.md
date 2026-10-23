@@ -1,9 +1,9 @@
 ---
-title: ABC 题解目录
+title: AGC 题解目录
 ---
 
-# AtCoder Beginner Contest（ABC）
+# AtCoder Grand Contest（AGC）
 
-这里收录 ABC 系列题解。
+这里收录 AGC 系列题解。
 
-<AtCoderIndex />
+<AGCIndex />

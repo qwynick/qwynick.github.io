@@ -1,0 +1,18 @@
+/* 扩大 VitePress 文档内容区域 */
+:root {
+    --vp-layout-max-width: 1600px;
+    --vp-content-width: 1400px;
+}
+
+.VPDoc .container {
+    max-width: 1600px !important;
+}
+
+.VPDoc .content {
+    max-width: none !important;
+}
+
+.VPDoc .content-container {
+    max-width: none !important;
+    width: 100%;
+}

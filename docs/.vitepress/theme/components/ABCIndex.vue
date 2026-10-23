@@ -1,5 +1,5 @@
 <script setup lang="ts">
-import { data as problems } from '../../AtCoder.data'
+import { data as problems } from '../../ABC.data'
 
 </script>
 

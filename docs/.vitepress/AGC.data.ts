@@ -1,7 +1,7 @@
 
 import { createContentLoader } from 'vitepress'
 
-export default createContentLoader('problems/ABC/**/*.md', {
+export default createContentLoader('problems/ARC/**/*.md', {
     transform(raw) {
         const groups = new Map<
             string,
@@ -16,7 +16,6 @@ export default createContentLoader('problems/ABC/**/*.md', {
 
         for (const { url, frontmatter } of raw) {
             const contest = String(frontmatter.contest ?? '')
-            if (/\/problems\/(ABC|ARC|AGC)\/index\.md$/.test(url)) continue
             // 跳过没有比赛编号的 Markdown 文件
             if (!contest) continue
 
