@@ -1,13 +1,13 @@
 ---
-title: "ABC479 G - 题目名称"
-contest: ABC479
-problem: G
+title: "AGC479 F - 题目名称"
+contest: AGC479
+problem: F
 url: https://atcoder.jp/contests/abc479/tasks/abc479_g
 difficulty: 2200
 score: 600
 tags:
-  - 动态规划
-  - 组合数学
+  - 计算几何
+  - 数论
 status: AC
 ---
 

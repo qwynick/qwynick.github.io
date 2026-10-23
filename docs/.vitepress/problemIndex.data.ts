@@ -4,7 +4,20 @@ import { createContentLoader } from 'vitepress'
 export default createContentLoader('problems/**/*.md', {
     transform(raw) {
         return raw
-            .filter(({ frontmatter }) => frontmatter.status !== 'draft')
+            .filter(({ url, frontmatter }) => {
+                // 排除 ABC、ARC、AGC 的目录首页
+                const normalizedUrl = url.replace(/\/+$/, '')
+
+                if (
+                    ['/problems/ABC', '/problems/ARC', '/problems/AGC']
+                        .includes(normalizedUrl)
+                ) {
+                    return false
+                }
+
+                // 保留原有的草稿过滤
+                return frontmatter.status !== 'draft'
+            })
             .map(({ url, frontmatter }) => ({
                 // 题解页面的站内地址
                 url,

@@ -1,13 +1,13 @@
 ---
-title: "ABC479 G - 题目名称"
-contest: ABC479
-problem: G
+title: "ARC179 E - 题目名称"
+contest: ARC179
+problem: E
 url: https://atcoder.jp/contests/abc479/tasks/abc479_g
-difficulty: 2200
+difficulty: 2000
 score: 600
 tags:
-  - 动态规划
-  - 组合数学
+  - 思维
+  - DP
 status: AC
 ---
 
