@@ -1,5 +1,5 @@
 ---
-title: "ABC478 F - 题目名称11111111111111111111111111111111111111111111111111111111"
+title: "ABC478 F - 题目名称"
 contest: ABC478
 problem: F
 url: https://atcoder.jp/contests/abc479/tasks/abc479_g

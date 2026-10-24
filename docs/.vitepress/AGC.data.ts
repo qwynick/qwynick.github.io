@@ -1,7 +1,7 @@
 
 import { createContentLoader } from 'vitepress'
 
-export default createContentLoader('problems/ARC/**/*.md', {
+export default createContentLoader('problems/AGC/**/*.md', {
     transform(raw) {
         const groups = new Map<
             string,
