@@ -15,10 +15,10 @@ export default defineConfig({
             { text: 'AGC', link: '/problems/AGC/' }
         ]
     },
-    // head: [
-    //     // 引入 KaTeX 的 CSS，这是公式正常显示的关键
-    //     ['link', { rel: 'stylesheet', href: 'https://cdn.jsdelivr.net/npm/katex@0.19.1/dist/katex.min.css' }]
-    // ],
+    head: [
+        // 引入 KaTeX 的 CSS，这是公式正常显示的关键
+        ['link', { rel: 'stylesheet', href: '/katex.min.css' }]
+    ],
     markdown: {
         config: (md) => {
             md.use(markdownItKatex)
