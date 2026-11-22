@@ -3,6 +3,8 @@ title: "floorsum"
 catagory: otherMath
 ---
 
+# floorsum
+
 给出 $n,m,a,b$，求 $\sum_{i=0}^{n-1} \lfloor \frac{a \times i + b}{m} \rfloor$。
 
 ## $a \ge 0,b \ge 0$ 的情况。

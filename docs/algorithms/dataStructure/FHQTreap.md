@@ -3,6 +3,8 @@ title: "FHQTreap"
 catagory: dataStucture
 ---
 
+# FHQTreap
+
 FHQTreap通过线段树合并分裂来实现各种查询。
 随机权重在合并两棵子树时确定谁是父，谁是子。避免了旋转操作。
 核心是分裂和合并操作。难点是想清楚分裂的时候两边虚位以待的父节点，及递归时的变化。

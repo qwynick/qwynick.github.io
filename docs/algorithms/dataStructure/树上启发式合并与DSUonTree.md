@@ -1,7 +1,9 @@
 ---
-title: "树上启发式合并与DSU on Tree"
+title: "树上启发式合并与DSUonTree"
 catagory: dataStucture
 ---
+
+# 树上启发式合并与DSUonTree
 
 树上启发式合并
 一般用map记录子树信息，然后一步步向上合并，合并的时候，考虑map的大小，从小的合并入大的

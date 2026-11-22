@@ -3,6 +3,8 @@ title: "FMT与FWT"
 catagory: numberTheory
 ---
 
+# FMT与FWT
+
 $C_i=\sum_{j\oplus k=i}A_j×B_k$
 这里 $\oplus$ 可以是 &|^，直接计算复杂度会去到 $O(n^2)$。
 

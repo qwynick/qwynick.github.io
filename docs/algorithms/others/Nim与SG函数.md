@@ -3,6 +3,8 @@ title: "Nim与SG函数"
 catagory: others
 ---
 
+# Nim与SG函数
+
 Nim与SG函数
 
 有多堆石子，每次可以从一堆石子中拿任意多个，谁不能拿谁就输了，问必胜策略。

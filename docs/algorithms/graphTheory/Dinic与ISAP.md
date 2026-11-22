@@ -3,6 +3,8 @@ title: "Dinic与ISAP"
 catagory: graphTheory
 ---
 
+# Dinic与ISAP
+
 Ford-Fulkerson 给出了一个求最大流的方法，即通过不断找增广路，直到找不到为止。但是并没有给出具体找的方式，如果胡乱找的话，理论上每增加 $1$ 流量都需要把边跑完一遍，复杂度可能去到 $O(Ef)$，这里 $E$ 是边数，$f$ 是流量。
 
 Edmonds-Karp 算法指出用 BFS 寻找增广路，复杂度为 $O(VE^2)$。

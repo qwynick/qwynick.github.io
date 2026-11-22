@@ -3,6 +3,8 @@ title: "SternBrocot树"
 catagory: otherMath
 ---
 
+# SternBrocot树
+
 ![图片](https://img2024.cnblogs.com/blog/3629076/202606/3629076-20260616214245847-782132399.png)
 
 Stern-Brocot树可以用于逼近一个分数，首先定义下确界和上确界，然后不断向左或者右平均。

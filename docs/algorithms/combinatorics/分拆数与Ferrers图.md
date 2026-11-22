@@ -3,6 +3,8 @@ title: "分拆数与Ferrers图"
 catagory: combinatorics
 ---
 
+# 分拆数与Ferrers图
+
 为了后面方便描述，整体描述为一个将 $n$ 个全同石子分为 $m$ 堆的问题。
 
 对于计入堆顺序的，最直接的做法就是直接插板法求组合数。

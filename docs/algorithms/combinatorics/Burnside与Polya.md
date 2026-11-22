@@ -3,6 +3,8 @@ title: "Burnside与Polya"
 catagory: combinatorics
 ---
 
+# Burnside与Polya
+
 在存在复杂对称性的结构上进行着色，由于不同的着色方案可能本质上是一样的，很容易算重。运用Burnside计数可以很好解决。
 Burnside计数的出发点是将所有稳定的**着色方案-操作方式**对(color-operation)按两种方式进行归集：归集到着色方案和归集到操作方式。这里稳定的表示某种着色方案在某种操作下不变。
 类似于二维表格中间有很多数字1，先行求和再列求和=先列求和再行求和。

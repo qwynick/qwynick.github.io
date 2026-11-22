@@ -37,8 +37,9 @@ export default defineConfig({
         ['link', { rel: 'stylesheet', href: '/katex.min.css' }]
     ],
     markdown: {
-        config: (md) => {
-            md.use(markdownItKatex)
-        },
+        math: true,
+        // config: (md) => {
+        //     md.use(markdownItKatex)
+        // },
     },
 })

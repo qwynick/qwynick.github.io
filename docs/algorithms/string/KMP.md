@@ -3,6 +3,8 @@ title: "KMP"
 catagory: string
 ---
 
+# KMP
+
 先求 $border$，$fail_i$ 记录以 $i$ 为截止位置的最大 $border$，即前后缀匹配长度。
 $j$ 记录处理完 $i$ 位置后，最长的前后缀匹配长度。
 对于一个新的位置 $i$：

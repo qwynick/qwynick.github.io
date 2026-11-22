@@ -3,6 +3,8 @@ title: "FFT与NTT"
 catagory: numberTheory
 ---
 
+# FFT与NTT
+
 FFT 主要是用于求解多项式卷积。
 即对于 $A(x)=a_0+a_1x+a_2x^2+a_3x^3+a_4x^4+...a_nx^n$ 以及 $B(x)=b_0+b_1x+b_2x^2+b_3x^3+b_4x^4+...+b_mx^m$ 求 $C(x)=A(x)B(x)$ 各项的系数。
 正常用二重循环将 $A(x)$ 和 $B(x)$ 的各项系数乘起来非常直接，但是复杂度会去到 $O(nm)$。

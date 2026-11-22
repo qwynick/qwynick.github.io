@@ -3,6 +3,8 @@ title: "Splay"
 catagory: dataStucture
 ---
 
+# Splay
+
 Splay通过将最近查询点拉到特定位置实现均摊log。
 
 核心是旋转操作和splay操作。难点是想清楚旋转方式。

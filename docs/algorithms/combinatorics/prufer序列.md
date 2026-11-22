@@ -3,6 +3,8 @@ title: "prufer序列"
 catagory: combinatorics
 ---
 
+# prufer序列
+
 考虑一个无根树，每次取掉最小的叶结点，并记录该叶结点所连的点，直到最后只剩下两个点。记录的数字形成的序列即为prufer序列。
 
 ![图片](https://img2024.cnblogs.com/blog/3629076/202606/3629076-20260609140511699-2089305834.png)

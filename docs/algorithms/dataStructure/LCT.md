@@ -3,6 +3,8 @@ title: "LCT"
 catagory: dataStucture
 ---
 
+# LCT
+
 动态树相对于树链剖分来说，可以多处理树的连接和断开。
 
 总体思想，运用splay维护辅助树，间接维护原树的信息。

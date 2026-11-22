@@ -3,6 +3,8 @@ title: "SlopeTrick"
 catagory: others
 ---
 
+# SlopeTrick
+
 **如果 $dp$ 的状态呈现凸性，且可以表示为若干线段，则可以维护线段拐点而非线段上各点。**
 实现需要左右两个堆，分别维护最小平台左侧和右侧的拐点。
 

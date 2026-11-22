@@ -3,6 +3,8 @@ title: "RSA原理"
 catagory: numberTheory
 ---
 
+# RSA原理
+
 找到有两个非常大的素数 $p,q$，令 $n=pq$。
 产生公钥 $e,n$，满足 $(e,\phi(n))=1$，确保有逆元。这里 $2^e>n$ 可提高安全性。
 产生私钥 $d,n$，满足 $ed=1 \pmod {\phi(n)}$。可用欧几里得算法计算 $e$ 的逆元得到 $d$。

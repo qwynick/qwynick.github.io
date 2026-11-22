@@ -3,6 +3,8 @@ title: "LGV引理"
 catagory: combinatorics
 ---
 
+# LGV引理
+
 LGV 主要用于求有向图一一配对无相交路径数。
 
 以下路径不特别说明皆指不相交路径。
