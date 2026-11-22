@@ -1,5 +1,4 @@
 import { defineConfig } from 'vitepress'
-import markdownItKatex from 'markdown-it-katex'
 
 export default defineConfig({
     lang: 'zh-CN',
@@ -32,14 +31,7 @@ export default defineConfig({
             }
         ]
     },
-    head: [
-        // 引入 KaTeX 的 CSS，这是公式正常显示的关键
-        ['link', { rel: 'stylesheet', href: '/katex.min.css' }]
-    ],
     markdown: {
         math: true,
-        // config: (md) => {
-        //     md.use(markdownItKatex)
-        // },
     },
 })
