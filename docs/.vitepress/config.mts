@@ -3,8 +3,8 @@ import markdownItKatex from 'markdown-it-katex'
 
 export default defineConfig({
     lang: 'zh-CN',
-    title: '算法题解笔记',
-    description: '算法竞赛题解与知识整理',
+    title: 'qwynick的算法小站 ',
+    description: '算法竞赛的算法整理与题解思路记录',
     base: '/',
     themeConfig: {
         nav: [
@@ -12,7 +12,8 @@ export default defineConfig({
             { text: '题目检索', link: '/problem-index' },
             {
                 text: 'AtCoder',
-                items: [{ text: 'ABC', link: '/problems/ABC/' },
+                items: [{ text: '总览', link: '/problems/' },
+                { text: 'ABC', link: '/problems/ABC/' },
                 { text: 'ARC', link: '/problems/ARC/' },
                 { text: 'AGC', link: '/problems/AGC/' }],
             },
