@@ -10,14 +10,18 @@ interface Problem {
   difficulty: number | null
   score: number | null
   tags: string[]
+  thinking?: string
   externalUrl: string
 }
 
 const keyword = ref('')
 const minRating = ref('')
 const maxRating = ref('')
+const minScore = ref('')
+const maxScore = ref('')
 const contestType = ref('全部')
 const selectedTags = ref<string[]>([])
+const selectedThinking = ref<string[]>([])
 const sortBy = ref('rating-asc')
 const pageSize = ref(100)
 const currentPage = ref(1)
@@ -30,11 +34,24 @@ const allTags = computed(() => {
   return [...new Set(problems.value.flatMap(p => p.tags))].sort()
 })
 
+// 收集题库中实际存在的思维难度
+const allThinking = computed(() => {
+  return [...new Set(
+    problems.value
+      .map(p => p.thinking)
+      .filter(Boolean)
+  )].sort()
+})
+
 // 根据条件筛选
 const filteredProblems = computed(() => {
   const q = keyword.value.trim().toLowerCase()
+
   const min = minRating.value === '' ? null : Number(minRating.value)
   const max = maxRating.value === '' ? null : Number(maxRating.value)
+
+  const minS = minScore.value === '' ? null : Number(minScore.value)
+  const maxS = maxScore.value === '' ? null : Number(maxScore.value)
 
   const result = problems.value.filter(p => {
     const text = [
@@ -52,6 +69,12 @@ const filteredProblems = computed(() => {
     if (max !== null &&
         (p.difficulty === null || p.difficulty > max)) return false
 
+    if (minS !== null &&
+        (p.score === null || p.score < minS)) return false
+
+    if (maxS !== null &&
+        (p.score === null || p.score > maxS)) return false
+
     if (contestType.value !== '全部') {
       const c = p.contest.toUpperCase()
       if (contestType.value === 'Codeforces') {
@@ -65,6 +88,11 @@ const filteredProblems = computed(() => {
     if (
       selectedTags.value.length > 0 &&
       !selectedTags.value.some(tag => p.tags.includes(tag))
+    ) return false
+
+    if (
+      selectedThinking.value.length > 0 &&
+      !selectedThinking.value.includes(p.thinking)
     ) return false
 
     return true
@@ -102,7 +130,7 @@ const pageProblems = computed(() => {
 
 // 筛选条件变化时回到第一页
 watch(
-  [keyword, minRating, maxRating, contestType, selectedTags, sortBy, pageSize],
+  [keyword, minRating, maxRating, minScore, maxScore, contestType, selectedTags, selectedThinking, sortBy, pageSize],
   () => { currentPage.value = 1 },
 )
 
@@ -112,12 +140,21 @@ function toggleTag(tag: string) {
     : [...selectedTags.value, tag]
 }
 
+function toggleThinking(thinking: string) {
+  selectedThinking.value = selectedThinking.value.includes(thinking)
+    ? selectedThinking.value.filter(t => t !== thinking)
+    : [...selectedThinking.value, thinking]
+}
+
 function resetFilters() {
   keyword.value = ''
   minRating.value = ''
   maxRating.value = ''
+  minScore.value = ''
+  maxScore.value = ''
   contestType.value = '全部'
   selectedTags.value = []
+  selectedThinking.value = []
   sortBy.value = 'rating-asc'
   pageSize.value = 100
   currentPage.value = 1
@@ -158,6 +195,26 @@ function pageLabel(p: Problem) {
           <span>Rating 最高</span>
           <input
             v-model="maxRating"
+            type="number"
+            min="0"
+            placeholder="不限"
+          />
+        </label>
+
+        <label class="field">
+          <span>分值最低</span>
+          <input
+            v-model="minScore"
+            type="number"
+            min="0"
+            placeholder="不限"
+          />
+        </label>
+
+        <label class="field">
+          <span>分值最高</span>
+          <input
+            v-model="maxScore"
             type="number"
             min="0"
             placeholder="不限"
@@ -221,6 +278,30 @@ function pageLabel(p: Problem) {
         </div>
         <p class="tag-hint">多选时按 OR 匹配，即符合任意一个标签即可。</p>
       </details>
+
+      <div class="tag-filter">
+        <div class="tag-filter-title">
+          思维难度
+          <span v-if="selectedThinking.length">
+            （已选 {{ selectedThinking.length }} 个）
+          </span>
+        </div>
+
+        <div class="tags">
+          <button
+            v-for="thinking in allThinking"
+            :key="thinking"
+            type="button"
+            class="tag"
+            :class="{ active: selectedThinking.includes(thinking) }"
+            :aria-pressed="selectedThinking.includes(thinking)"
+            @click="toggleThinking(thinking)"
+          >
+            {{ thinking }}
+          </button>
+        </div>
+      </div>
+
     </div>
 
     <div class="result-info">

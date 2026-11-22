@@ -40,6 +40,8 @@ export default createContentLoader('problems/**/*.md', {
                     ? frontmatter.tags.map(String)
                     : [],
 
+                thinking: String(frontmatter.thinking ?? ''),
+
                 // 原始比赛题目链接
                 externalUrl: String(frontmatter.url ?? ''),
             }))

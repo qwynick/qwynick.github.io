@@ -8,7 +8,7 @@ score: 600
 tags:
   - 计算几何
   - 数论
-status: AC
+thinking: 想了很久
 ---
 
 # 题目分析
