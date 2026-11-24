@@ -8,10 +8,7 @@ export default createContentLoader('problems/**/*.md', {
                 // 排除 ABC、ARC、AGC 的目录首页
                 const normalizedUrl = url.replace(/\/+$/, '')
 
-                if (
-                    ['/problems/ABC', '/problems/ARC', '/problems/AGC']
-                        .includes(normalizedUrl)
-                ) {
+                if (url.endsWith('/')) {
                     return false
                 }
 
