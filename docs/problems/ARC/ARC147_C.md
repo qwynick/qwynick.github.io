@@ -1,8 +1,8 @@
 ---
 title: "ARC147 C - Min Diff Sum"
-contest: ARC144
+contest: ARC147
 problem: C
-url: https://atcoder.jp/contests/arc144/tasks/arc144_c
+url: https://atcoder.jp/contests/arc147/tasks/arc147_c
 difficulty: 1704
 score: 600
 tags:
